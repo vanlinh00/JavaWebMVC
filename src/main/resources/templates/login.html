@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" th:href="@{/css/styles.css}"> <!-- Kết nối file CSS tùy chỉnh -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
 </head>
 <body>
 <div class="container">
@@ -20,6 +20,7 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" class="form-control" required>
                 </div>
+                <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div> <!-- Thông báo lỗi -->
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
             <p class="text-center mt-3">
