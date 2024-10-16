@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<table id="myTable" class="display">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Office</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>John</td>
+        <td>Developer</td>
+        <td>NYC</td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+    $(document).ready( function () {
+        $('#myTable').DataTable();
+    });
+</script>
+</body>
+</html>

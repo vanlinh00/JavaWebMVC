@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <title>Home</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="/js/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to the Home Page</h1>
+    <sec:authorize access="isAuthenticated()">
+        <p>Logged in as: <span sec:authentication="name"></span></p>
+        <a href="/logout" class="btn btn-danger">Logout</a>
+    </sec:authorize>
+    <sec:authorize access="!isAuthenticated()">
+        <a href="/login" class="btn btn-success">Login</a>
+    </sec:authorize>
+</div>
+</body>
+</html>
